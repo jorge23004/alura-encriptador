@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #F3F5FC;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    font-family: 'inter';
+}
+main{
+    padding: 8rem 0 0 4rem ;
+    margin-right: 3rem;
+    
+}
+main textarea{
+    border: none;
+    background: transparent;
+    resize: none;
+    font-family: 'inter';
+    font-size: 2rem;
+    height: 400px;
+    width: 100vh;
+}
+main textarea:focus{
+    outline: none;
+}
+main textarea::placeholder, main textarea, .buttons button{
+    color:#0A3871;
+}
+.botonesYTexto{
+    color: gray;
+}
+.buttons{
+    margin-top: 1rem;
+}
+.buttons button{
+    font-size: 1.5rem;
+    border:solid 2px #0A3871;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+button{
+    cursor: pointer;
+}
+.buttons button:first-child{
+    background-color: #0A3871;
+    margin-right: 1.5rem;
+    color: white;
+}
+.buttons button:first-child:hover{
+    background-color: #052051;
+}
+.buttons button:nth-child(2):hover, .resultado button:hover{
+    background-color: #d8ddf0;
+}
+.resultado{
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0px 10px 10px rgb(222, 224, 227);
+    min-width: 350px;
+    width: fit-content !important;
+    padding: 0 1rem;
+}
+.resultado img{
+    width: 250px;
+    margin: 150px 50px 0 50px; 
+}
+.resultado h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.resultado p{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.resultado div{
+    display: flex;
+    justify-content: center;
+}
+.resultado button{
+    font-size: 1.5rem;
+    border:solid 2px #0A3871;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: transparent;
+    width: 90%;
+    transition: all .5s;
+    color:#0A3871;
+}
+
+.oculto{
+    display: none !important;
+}
+
+.respuesta{
+    font-size: 1.5rem;
+    text-align: left;
+    margin:40px 20px !important;
+    text-align: left !important;
+    color: rgb(67, 67, 67);
+    height: 75%;
+}
+
+.notificacion{
+    position: absolute;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(222, 224, 227);
+    color: #0A3871;
+    top:5%;
+    left: 50%;
+    transform: translate(-50%);
+    animation-duration: 1s;
+    animation-name: slidein;
+    text-align: center;
+}
+
+
+@keyframes slidein{
+    from{
+        top:0%;
+    }
+    to{
+        top:5%;
+    }
+}
+
+@media screen and (max-width:1200px){
+    body{
+        display: block;
+    }
+    aside svg{
+        width: min-content;
+    }
+    main{
+        padding:0;
+        margin-top: 100px;
+        margin: 100px 0 0 0;
+    }
+    main textarea{
+        height: 500px;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .resultado{
+        margin:40px 0 ;
+        padding: 30px;
+    }
+    .resultado img{
+        display: none;
+    }
+    .resultado p{
+        height: fit-content;
+    }
+    
+    main, main textarea, .botonesYTexto, .resultado{
+        width: 900px;
+    }
+    .resultado button{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .resultado p{
+        margin-top:0 ;
+    }
+    .respuesta{
+        font-size: 1.2rem;
+        margin: 0 !important;
+    }
+
+}
+
+@media screen and (max-width:900px)  {
+    body{
+        display: block;
+    }
+    aside svg{
+        width: min-content;
+    }
+    main{
+        padding:0;
+        margin-top: 100px;
+        margin: 100px 0 0 0;
+        width: 670px;
+    }
+    main textarea{
+
+        height: 500px;
+        width: 670px;
+    }
+    .botonesYTexto{
+        width: 670px;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .resultado{
+        margin:40px 0 ;
+        min-width: 670px;
+        width: fit-content !important;
+        padding: 30px;
+    }
+    .resultado img{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:450px ) {
+    body{
+        padding: 25px;
+    }
+    main{
+        width: 350px;
+    }
+    main textarea{
+        width: 350px;
+        height: 350px;
+    }
+    .buttons{
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botonesYTexto{
+        width: 350px;
+    }
+    .buttons button{
+        width: 100%;
+    }
+    .buttons button:first-child{
+        margin: 0 0 20px 0 ;
+    }
+    .resultado{
+        min-width: 350px;
+        width: fit-content;
+    }
+}
+
+
